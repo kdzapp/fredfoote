@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>mailcore ios.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>mailcore osx.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>static mailcore2 ios.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>static mailcore2 osx.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>test-ios.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>unittest.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>unittestcpp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>27780C2A19CF9CD100C77E44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C600B6131A242C3F000728F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C64EA536169E772200778456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C64EA78B169F259200778456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6A81B901706840C00882C15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6B5AE0119F630B3001352A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6BA2B091705F4E6003F0E9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6BD288C170BD71100A91AC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
