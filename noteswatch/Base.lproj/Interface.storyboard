@@ -16,6 +16,9 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="sendButton" destination="t5j-6o-CJb" id="4Hj-2W-fls"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>

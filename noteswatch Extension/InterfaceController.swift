@@ -9,10 +9,12 @@
 import WatchKit
 import Foundation
 import WatchConnectivity
+import UIKit
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var session: WCSession!
+    @IBOutlet var sendButton: WKInterfaceButton!
     
     
     override func awakeWithContext(context: AnyObject?) {
@@ -44,6 +46,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activateSession()
         }
+    }
+    
+    override func didAppear() {
+        super.didAppear()
+        
+        let seconds = 0.5
+        let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            self.test()
+        })
+        
     }
 
     override func didDeactivate() {
