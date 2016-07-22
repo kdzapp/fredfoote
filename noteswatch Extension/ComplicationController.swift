@@ -32,7 +32,28 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
-        // Call the handler with the current timeline entry
+        let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "microphone.png")!)
+        let now = NSDate()
+        
+        switch complication.family {
+        case .ModularSmall:
+            let smalltemp = CLKComplicationTemplateModularSmallSimpleImage()
+            smalltemp.imageProvider = imageProvider
+            let small = CLKComplicationTimelineEntry(date: now, complicationTemplate: smalltemp)
+            handler(small)
+        case .CircularSmall:
+            let circsmalltemp = CLKComplicationTemplateCircularSmallSimpleImage()
+            circsmalltemp.imageProvider = imageProvider
+            let circsmall = CLKComplicationTimelineEntry(date: now, complicationTemplate: circsmalltemp)
+            handler(circsmall)
+        case .UtilitarianSmall:
+            let utilsmalltemp = CLKComplicationTemplateUtilitarianSmallRingImage()
+            utilsmalltemp.imageProvider = imageProvider
+            let utilsmall = CLKComplicationTimelineEntry(date: now, complicationTemplate: utilsmalltemp)
+            handler(utilsmall)
+        default:
+            handler(nil)
+        }
         handler(nil)
     }
     

@@ -14,6 +14,8 @@ import UIKit
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var session: WCSession!
+    var automaticStartup = true
+    
     @IBOutlet var sendButton: WKInterfaceButton!
     
     
@@ -51,13 +53,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func didAppear() {
         super.didAppear()
         
-        let seconds = 0.5
-        let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        
-        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-            self.test()
-        })
+        if(automaticStartup) {
+            
+            let seconds = 0.5
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                self.test()
+                self.automaticStartup = false
+            })
+        }
         
     }
 

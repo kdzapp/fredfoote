@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="noteswatch" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Send Email" id="t5j-6o-CJb">
+                        <button width="57" height="58" alignment="center" verticalAlignment="center" backgroundImage="ic_mic_white_48pt" id="t5j-6o-CJb">
                             <connections>
                                 <action selector="test" destination="AgC-eL-Hgc" id="YuN-qj-YC1"/>
                             </connections>
@@ -21,6 +21,7 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="408" y="272"/>
         </scene>
     </scenes>
 </document>
