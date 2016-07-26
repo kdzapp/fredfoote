@@ -8,14 +8,18 @@
 
 import UIKit
 import WatchConnectivity
+import CoreData
 
 class ViewController: UIViewController,  WCSessionDelegate {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
     
     var session: WCSession!
+    var emailCD = NSManagedObject()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
@@ -28,6 +32,13 @@ class ViewController: UIViewController,  WCSessionDelegate {
         //Intialize as Email Keyboard, No AutoCorrect
         emailText.keyboardType = .EmailAddress
         emailText.autocorrectionType = .No
+        
+        if let emailData = emailCD.valueForKey("email") as? String {
+            emailLabel!.text = emailData
+        }
+        else {
+            emailLabel!.text = "No Email"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,10 +46,15 @@ class ViewController: UIViewController,  WCSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func setEmailButton(sender: AnyObject) {
+        saveEmail(emailText.text!)
+        emailLabel.text! = emailText.text!
+        print(emailCD.valueForKey("email") as? String)
+    }
     
     @IBAction func buttonPush(sender: AnyObject) {
         let message: String = textView.text
-        sendEmail(message, email: emailText.text)
+        sendEmail(message,email: emailCD.valueForKey("email") as? String)
     }
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
@@ -50,6 +66,23 @@ class ViewController: UIViewController,  WCSessionDelegate {
         }
         //send a reply
         replyHandler(["Value":"Yes"])
+    }
+    
+    func saveEmail(emailStr: String) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("Emaildata", inManagedObjectContext:managedContext)
+        let email = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        email.setValue(emailStr, forKey: "name")
+        
+        do {
+            try managedContext.save()
+            self.emailCD = email;
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 
 }
@@ -73,6 +106,7 @@ func sendEmail(message: String, email: String?) {
     } else {
         address = MCOAddress(mailbox: "kdzapp@umich.edu")
     }
+    
     var addressList = [AnyObject]()
     addressList.append(address)
     builder.header.to = addressList

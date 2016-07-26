@@ -418,7 +418,7 @@
 				TargetAttributes = {
 					271F222C1D2D6D6000D964C8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = W8LH9NJKD5;
+						DevelopmentTeam = 62TAE2M52X;
 					};
 					271F22431D2D6D6000D964C8 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -432,11 +432,11 @@
 					};
 					273365AB1D3009AF0061C03C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = W8LH9NJKD5;
+						DevelopmentTeam = 62TAE2M52X;
 					};
 					273365B71D3009AF0061C03C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = W8LH9NJKD5;
+						DevelopmentTeam = 62TAE2M52X;
 					};
 				};
 			};
@@ -758,6 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = notes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -773,8 +774,9 @@
 					"-stdlib=libc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kyle.notes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./notes/notes-Bridging-Header.h";
 			};
 			name = Debug;
@@ -785,6 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = notes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -800,8 +803,9 @@
 					"-stdlib=libc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kyle.notes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./notes/notes-Bridging-Header.h";
 			};
 			name = Release;
@@ -861,7 +865,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = noteswatch_Extension;
 				INFOPLIST_FILE = noteswatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = kyle.notes.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -880,7 +884,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = noteswatch_Extension;
 				INFOPLIST_FILE = noteswatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = kyle.notes.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -898,7 +902,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "noteswatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kyle.notes.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -916,7 +920,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "noteswatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kyle.notes.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;

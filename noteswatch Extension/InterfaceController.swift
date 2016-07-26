@@ -50,19 +50,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
+    override func handleUserActivity(userInfo: [NSObject : AnyObject]?) {
+        print(userInfo)
+        autoDic()
+    }
+    
     override func didAppear() {
         super.didAppear()
         
         if(automaticStartup) {
-            
-            let seconds = 0.5
-            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-            
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                self.test()
-                self.automaticStartup = false
-            })
+            autoDic()
         }
         
     }
@@ -72,15 +69,36 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
+    /*
+     * sendData() uses session's sendMessage to send 
+     * the dictaion to the phone inorder to be sent via email
+     */
     func sendData(data: [String:String]) {
         print("WCSession is reachabe: \(WCSession.defaultSession().reachable)")
         session.sendMessage(data, replyHandler: { replyMessage in
             //handle and present the message on screen
             let value = replyMessage["Value"] as? String
             print(value)
+            exit(0)
             }, errorHandler: {error in
                 // catch any errors here
                 print(error)
+        })
+    }
+    
+    /*
+     * autoDic() activates dictation programmically
+     */
+    func autoDic() {
+        //Add Delay to avoid crash
+        let seconds = 0.5
+        let delay = seconds * Double(NSEC_PER_SEC)
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        //automaticStatup for if "canceled"
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            self.test()
+            self.automaticStartup = false
         })
     }
 

@@ -41,22 +41,48 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emailHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-0B-weB">
+                                <rect key="frame" x="260" y="383" width="81" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="ZBE-fF-yKA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akf-mr-Ad4">
+                                <rect key="frame" x="265" y="104" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="DaK-HD-j8j"/>
+                                </constraints>
+                                <state key="normal" title="Set Email"/>
+                                <connections>
+                                    <action selector="setEmailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjb-px-1dZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QJW-ls-Gy6" firstAttribute="leading" secondItem="3bT-5N-dGZ" secondAttribute="leading" id="041-lq-1JR"/>
                             <constraint firstItem="3bT-5N-dGZ" firstAttribute="top" secondItem="QJW-ls-Gy6" secondAttribute="bottom" constant="36" id="EWr-1Z-u2B"/>
+                            <constraint firstItem="3bT-5N-dGZ" firstAttribute="top" secondItem="akf-mr-Ad4" secondAttribute="bottom" constant="8" symbolic="YES" id="KOa-2H-AHj"/>
+                            <constraint firstItem="akf-mr-Ad4" firstAttribute="top" secondItem="QJW-ls-Gy6" secondAttribute="bottom" constant="8" symbolic="YES" id="Se2-Os-JWP"/>
+                            <constraint firstItem="EWS-0B-weB" firstAttribute="top" secondItem="JnK-xj-q4u" secondAttribute="bottom" constant="68" id="Xgf-oy-RsL"/>
                             <constraint firstItem="3bT-5N-dGZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="112" id="bjG-RF-zCw"/>
                             <constraint firstItem="3bT-5N-dGZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNr-6E-3Ca"/>
                             <constraint firstItem="JnK-xj-q4u" firstAttribute="centerX" secondItem="3bT-5N-dGZ" secondAttribute="centerX" id="dzz-Ir-3s9"/>
                             <constraint firstItem="JnK-xj-q4u" firstAttribute="top" secondItem="3bT-5N-dGZ" secondAttribute="bottom" constant="25" id="kHq-Ef-abi"/>
+                            <constraint firstItem="EWS-0B-weB" firstAttribute="centerX" secondItem="JnK-xj-q4u" secondAttribute="centerX" id="sg4-ep-7Rw"/>
                             <constraint firstItem="QJW-ls-Gy6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wEY-nc-a65"/>
                             <constraint firstItem="JnK-xj-q4u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yXZ-DP-cXu"/>
+                            <constraint firstItem="akf-mr-Ad4" firstAttribute="centerX" secondItem="QJW-ls-Gy6" secondAttribute="centerX" id="zj2-sF-nBt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="EWS-0B-weB" id="B3X-yO-Juj"/>
                         <outlet property="emailText" destination="QJW-ls-Gy6" id="hjJ-de-Bfk"/>
                         <outlet property="recordButton" destination="JnK-xj-q4u" id="aVW-Tk-yjP"/>
+                        <outlet property="setEmail" destination="akf-mr-Ad4" id="3St-pT-vt2"/>
                         <outlet property="textView" destination="3bT-5N-dGZ" id="gQo-5X-mcO"/>
                     </connections>
                 </viewController>

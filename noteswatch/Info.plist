@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>kyle.notes</string>
+	<string>com.fred.notesapp</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
