@@ -79,7 +79,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             //handle and present the message on screen
             let value = replyMessage["Value"] as? String
             print(value)
-            exit(0)
             }, errorHandler: {error in
                 // catch any errors here
                 print(error)

@@ -41,15 +41,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emailHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-0B-weB">
-                                <rect key="frame" x="260" y="383" width="81" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="ZBE-fF-yKA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akf-mr-Ad4">
                                 <rect key="frame" x="265" y="104" width="70" height="20"/>
                                 <constraints>
@@ -60,6 +51,15 @@
                                     <action selector="setEmailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjb-px-1dZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-0B-weB">
+                                <rect key="frame" x="180" y="383" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ZBE-fF-yKA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -82,7 +82,6 @@
                         <outlet property="emailLabel" destination="EWS-0B-weB" id="B3X-yO-Juj"/>
                         <outlet property="emailText" destination="QJW-ls-Gy6" id="hjJ-de-Bfk"/>
                         <outlet property="recordButton" destination="JnK-xj-q4u" id="aVW-Tk-yjP"/>
-                        <outlet property="setEmail" destination="akf-mr-Ad4" id="3St-pT-vt2"/>
                         <outlet property="textView" destination="3bT-5N-dGZ" id="gQo-5X-mcO"/>
                     </connections>
                 </viewController>
