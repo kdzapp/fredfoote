@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "271F22AB1D2F0CA100D964C8"
+               BlueprintIdentifier = "273365AB1D3009AF0061C03C"
                BuildableName = "noteswatch.app"
                BlueprintName = "noteswatch"
                ReferencedContainer = "container:notes.xcodeproj">
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "271F222C1D2D6D6000D964C8"
-               BuildableName = "notes.app"
+               BuildableName = "QuikTask.app"
                BlueprintName = "notes"
                ReferencedContainer = "container:notes.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "271F22B71D2F0CA100D964C8"
+               BlueprintIdentifier = "273365B71D3009AF0061C03C"
                BuildableName = "noteswatch Extension.appex"
                BlueprintName = "noteswatch Extension"
                ReferencedContainer = "container:notes.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271F22AB1D2F0CA100D964C8"
+            BlueprintIdentifier = "273365AB1D3009AF0061C03C"
             BuildableName = "noteswatch.app"
             BlueprintName = "noteswatch"
             ReferencedContainer = "container:notes.xcodeproj">
@@ -85,7 +85,7 @@
          RemotePath = "/notes">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271F22AB1D2F0CA100D964C8"
+            BlueprintIdentifier = "273365AB1D3009AF0061C03C"
             BuildableName = "noteswatch.app"
             BlueprintName = "noteswatch"
             ReferencedContainer = "container:notes.xcodeproj">
@@ -94,7 +94,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271F22AB1D2F0CA100D964C8"
+            BlueprintIdentifier = "273365AB1D3009AF0061C03C"
             BuildableName = "noteswatch.app"
             BlueprintName = "noteswatch"
             ReferencedContainer = "container:notes.xcodeproj">
@@ -115,7 +115,7 @@
          RemotePath = "/notes">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271F22AB1D2F0CA100D964C8"
+            BlueprintIdentifier = "273365AB1D3009AF0061C03C"
             BuildableName = "noteswatch.app"
             BlueprintName = "noteswatch"
             ReferencedContainer = "container:notes.xcodeproj">
@@ -124,7 +124,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "271F22AB1D2F0CA100D964C8"
+            BlueprintIdentifier = "273365AB1D3009AF0061C03C"
             BuildableName = "noteswatch.app"
             BlueprintName = "noteswatch"
             ReferencedContainer = "container:notes.xcodeproj">

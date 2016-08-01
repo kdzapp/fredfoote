@@ -26,7 +26,9 @@
 		273365C21D3009AF0061C03C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273365C11D3009AF0061C03C /* ComplicationController.swift */; };
 		273365C41D3009AF0061C03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273365C31D3009AF0061C03C /* Assets.xcassets */; };
 		273365C81D3009AF0061C03C /* noteswatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273365AC1D3009AF0061C03C /* noteswatch.app */; };
-		273365DA1D3011EA0061C03C /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 273365D91D3011EA0061C03C /* microphone.png */; };
+		27CF67BA1D4D40B10075F27C /* QTLogoUtilS.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CF67B91D4D40B10075F27C /* QTLogoUtilS.png */; };
+		27CF67C31D4D40E10075F27C /* QTLogoCircS.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CF67C21D4D40E10075F27C /* QTLogoCircS.png */; };
+		27CF67C51D4D40F90075F27C /* QTLogoModS.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CF67C41D4D40F90075F27C /* QTLogoModS.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,7 +151,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		271F222D1D2D6D6000D964C8 /* notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		271F222D1D2D6D6000D964C8 /* QuikTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuikTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		271F22301D2D6D6000D964C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		271F22321D2D6D6000D964C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		271F22351D2D6D6000D964C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,7 +179,9 @@
 		273365C11D3009AF0061C03C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		273365C31D3009AF0061C03C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		273365C51D3009AF0061C03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		273365D91D3011EA0061C03C /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
+		27CF67B91D4D40B10075F27C /* QTLogoUtilS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QTLogoUtilS.png; sourceTree = "<group>"; };
+		27CF67C21D4D40E10075F27C /* QTLogoCircS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QTLogoCircS.png; sourceTree = "<group>"; };
+		27CF67C41D4D40F90075F27C /* QTLogoModS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QTLogoModS.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +236,7 @@
 		271F222E1D2D6D6000D964C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				271F222D1D2D6D6000D964C8 /* notes.app */,
+				271F222D1D2D6D6000D964C8 /* QuikTask.app */,
 				271F22441D2D6D6000D964C8 /* notesTests.xctest */,
 				271F224F1D2D6D6000D964C8 /* notesUITests.xctest */,
 				273365AC1D3009AF0061C03C /* noteswatch.app */,
@@ -303,7 +307,9 @@
 		273365BC1D3009AF0061C03C /* noteswatch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				273365D91D3011EA0061C03C /* microphone.png */,
+				27CF67B91D4D40B10075F27C /* QTLogoUtilS.png */,
+				27CF67C41D4D40F90075F27C /* QTLogoModS.png */,
+				27CF67C21D4D40E10075F27C /* QTLogoCircS.png */,
 				273365BD1D3009AF0061C03C /* InterfaceController.swift */,
 				273365BF1D3009AF0061C03C /* ExtensionDelegate.swift */,
 				273365C11D3009AF0061C03C /* ComplicationController.swift */,
@@ -333,7 +339,7 @@
 			);
 			name = notes;
 			productName = notes;
-			productReference = 271F222D1D2D6D6000D964C8 /* notes.app */;
+			productReference = 271F222D1D2D6D6000D964C8 /* QuikTask.app */;
 			productType = "com.apple.product-type.application";
 		};
 		271F22431D2D6D6000D964C8 /* notesTests */ = {
@@ -565,8 +571,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CF67C31D4D40E10075F27C /* QTLogoCircS.png in Resources */,
 				273365C41D3009AF0061C03C /* Assets.xcassets in Resources */,
-				273365DA1D3011EA0061C03C /* microphone.png in Resources */,
+				27CF67C51D4D40F90075F27C /* QTLogoModS.png in Resources */,
+				27CF67BA1D4D40B10075F27C /* QTLogoUtilS.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +783,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QuikTask;
 				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./notes/notes-Bridging-Header.h";
 			};
@@ -804,7 +812,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fred.notesapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QuikTask;
 				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./notes/notes-Bridging-Header.h";
 			};

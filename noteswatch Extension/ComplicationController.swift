@@ -12,7 +12,6 @@ import ClockKit
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Timeline Configuration
-    
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
         handler([.Forward, .Backward])
     }
@@ -32,21 +31,23 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
-        let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "microphone.png")!)
         let now = NSDate()
         
         switch complication.family {
         case .ModularSmall:
+            let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "QTLogoModS.png")!)
             let smalltemp = CLKComplicationTemplateModularSmallSimpleImage()
             smalltemp.imageProvider = imageProvider
             let small = CLKComplicationTimelineEntry(date: now, complicationTemplate: smalltemp)
             handler(small)
         case .CircularSmall:
+            let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "QTLogoCircS.png")!)
             let circsmalltemp = CLKComplicationTemplateCircularSmallSimpleImage()
             circsmalltemp.imageProvider = imageProvider
             let circsmall = CLKComplicationTimelineEntry(date: now, complicationTemplate: circsmalltemp)
             handler(circsmall)
         case .UtilitarianSmall:
+            let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "QTLogoUtilS.png")!)
             let utilsmalltemp = CLKComplicationTemplateUtilitarianSmallRingImage()
             utilsmalltemp.imageProvider = imageProvider
             let utilsmall = CLKComplicationTimelineEntry(date: now, complicationTemplate: utilsmalltemp)
@@ -54,6 +55,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         default:
             handler(nil)
         }
+        
         handler(nil)
     }
     
@@ -78,18 +80,20 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
         //Need Images that fit size of other templates (Only works for modular small rn)
-        let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "microphone.png")!)
         
         switch complication.family {
         case .ModularSmall:
+            let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "QTLogoModS.png")!)
             let small = CLKComplicationTemplateModularSmallSimpleImage()
             small.imageProvider = imageProvider
             handler(small)
         case .CircularSmall:
+            let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "QTLogoCircS.png")!)
             let circsmall = CLKComplicationTemplateCircularSmallSimpleImage()
             circsmall.imageProvider = imageProvider
             handler(circsmall)
         case .UtilitarianSmall:
+            let imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "QTLogoUtilS.png")!)
             let utilsmall = CLKComplicationTemplateUtilitarianSmallRingImage()
             utilsmall.imageProvider = imageProvider
             handler(utilsmall)

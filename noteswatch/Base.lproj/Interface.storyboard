@@ -10,11 +10,16 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="noteswatch" customModuleProvider="target">
                     <items>
-                        <button width="57" height="58" alignment="center" verticalAlignment="center" backgroundImage="ic_mic_white_48pt" id="t5j-6o-CJb">
+                        <button width="120" height="55" alignment="center" verticalAlignment="bottom" title="New Task" id="t5j-6o-CJb">
+                            <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="15"/>
                             <connections>
                                 <action selector="test" destination="AgC-eL-Hgc" id="YuN-qj-YC1"/>
                             </connections>
                         </button>
+                        <label width="111.5" height="84.5" alignment="center" text="Press 'Crown' to Exit " textAlignment="center" numberOfLines="2" id="Ozi-Ub-GOX">
+                            <color key="textColor" red="0.94509803921568625" green="0.16078431372549021" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="sendButton" destination="t5j-6o-CJb" id="4Hj-2W-fls"/>

@@ -44,7 +44,7 @@ class ViewController: UIViewController,  WCSessionDelegate {
     
     @IBAction func buttonPush(sender: AnyObject) {
         let message: String = textView.text
-        sendEmail(message,email: emailCD.valueForKey("email") as? String)
+        sendEmail(message, email: emailCD.valueForKey("email") as? String)
         if let emailSent = emailCD.valueForKey("email") as? String {
             emailLabel.text! = "Sending email to " + emailSent + "..."
         }
@@ -54,8 +54,17 @@ class ViewController: UIViewController,  WCSessionDelegate {
         //handle received message
         let value = message["Value"] as! String
         //use this to present immediately on the screen
-        dispatch_async(dispatch_get_main_queue()) {
-            sendEmail(value, email: nil)
+        
+        let request = NSFetchRequest(entityName: "Emaildata")
+        let managedContext = appDelegate.managedObjectContext
+        do {
+            let result = try managedContext.executeFetchRequest(request)
+            let defaultEmail = (result[0] as! NSManagedObject).valueForKey("email") as! String
+            dispatch_async(dispatch_get_main_queue()) {
+                sendEmail(value, email: defaultEmail)
+            }
+        } catch {
+            print("Failed to fetch email: \(error)")
         }
         //send a reply
         replyHandler(["Value":"Yes"])
@@ -64,13 +73,26 @@ class ViewController: UIViewController,  WCSessionDelegate {
     func saveEmail(emailStr: String) {
         
         let managedContext = appDelegate.managedObjectContext
-        emailCD.setValue(emailStr, forKey: "email")
+        
+        let entityDescription = NSEntityDescription.entityForName("Emaildata", inManagedObjectContext: managedContext)
+        let request = NSFetchRequest()
+        request.entity = entityDescription
         
         do {
-            try managedContext.save()
-            print("saved")
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
+            let result = try managedContext.executeFetchRequest(request)
+            for data in result {
+                (data as! NSManagedObject).setValue(emailStr, forKey: "email")
+            }
+
+            do {
+                try managedContext.save()
+                print("saved")
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
         }
     }
 

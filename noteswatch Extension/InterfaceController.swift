@@ -13,9 +13,8 @@ import UIKit
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
-    var session: WCSession!
     var automaticStartup = true
-    
+    var session: WCSession!
     @IBOutlet var sendButton: WKInterfaceButton!
     
     
@@ -56,12 +55,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     override func didAppear() {
-        super.didAppear()
         
-        if(automaticStartup) {
+        super.didAppear()
+        if automaticStartup {
             autoDic()
         }
-        
     }
 
     override func didDeactivate() {
@@ -79,6 +77,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             //handle and present the message on screen
             let value = replyMessage["Value"] as? String
             print(value)
+            //Exit App
+            NSThread.exit()
             }, errorHandler: {error in
                 // catch any errors here
                 print(error)
@@ -90,7 +90,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
      */
     func autoDic() {
         //Add Delay to avoid crash
-        let seconds = 0.5
+        let seconds = 1.0
         let delay = seconds * Double(NSEC_PER_SEC)
         let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         
