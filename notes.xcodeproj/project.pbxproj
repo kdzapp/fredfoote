@@ -26,6 +26,7 @@
 		273365C21D3009AF0061C03C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273365C11D3009AF0061C03C /* ComplicationController.swift */; };
 		273365C41D3009AF0061C03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273365C31D3009AF0061C03C /* Assets.xcassets */; };
 		273365C81D3009AF0061C03C /* noteswatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273365AC1D3009AF0061C03C /* noteswatch.app */; };
+		2756AE9A1D511767000598FA /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2756AE991D511767000598FA /* loader.gif */; };
 		27CF67BA1D4D40B10075F27C /* QTLogoUtilS.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CF67B91D4D40B10075F27C /* QTLogoUtilS.png */; };
 		27CF67C31D4D40E10075F27C /* QTLogoCircS.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CF67C21D4D40E10075F27C /* QTLogoCircS.png */; };
 		27CF67C51D4D40F90075F27C /* QTLogoModS.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CF67C41D4D40F90075F27C /* QTLogoModS.png */; };
@@ -179,6 +180,7 @@
 		273365C11D3009AF0061C03C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		273365C31D3009AF0061C03C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		273365C51D3009AF0061C03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2756AE991D511767000598FA /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		27CF67B91D4D40B10075F27C /* QTLogoUtilS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QTLogoUtilS.png; sourceTree = "<group>"; };
 		27CF67C21D4D40E10075F27C /* QTLogoCircS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QTLogoCircS.png; sourceTree = "<group>"; };
 		27CF67C41D4D40F90075F27C /* QTLogoModS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QTLogoModS.png; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		273365BC1D3009AF0061C03C /* noteswatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2756AE991D511767000598FA /* loader.gif */,
 				27CF67B91D4D40B10075F27C /* QTLogoUtilS.png */,
 				27CF67C41D4D40F90075F27C /* QTLogoModS.png */,
 				27CF67C21D4D40E10075F27C /* QTLogoCircS.png */,
@@ -574,6 +577,7 @@
 				27CF67C31D4D40E10075F27C /* QTLogoCircS.png in Resources */,
 				273365C41D3009AF0061C03C /* Assets.xcassets in Resources */,
 				27CF67C51D4D40F90075F27C /* QTLogoModS.png in Resources */,
+				2756AE9A1D511767000598FA /* loader.gif in Resources */,
 				27CF67BA1D4D40B10075F27C /* QTLogoUtilS.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

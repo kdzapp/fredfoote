@@ -17,16 +17,19 @@
                                 <action selector="test" destination="AgC-eL-Hgc" id="YuN-qj-YC1"/>
                             </connections>
                         </button>
+                        <label width="136" height="141.5" alignment="left" text="Loading..." textAlignment="center" id="Cag-j4-Vtw"/>
                         <label width="111.5" height="84.5" alignment="center" text="Press 'Crown' to Exit " textAlignment="center" numberOfLines="2" id="Ozi-Ub-GOX">
                             <color key="textColor" red="0.94509803921568625" green="0.16078431372549021" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                     </items>
                     <connections>
+                        <outlet property="crownLabel" destination="Ozi-Ub-GOX" id="ONN-Fv-RyX"/>
+                        <outlet property="loaderTxt" destination="Cag-j4-Vtw" id="LOk-Ui-rzX"/>
                         <outlet property="sendButton" destination="t5j-6o-CJb" id="4Hj-2W-fls"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="408" y="272"/>
+            <point key="canvasLocation" x="408" y="378"/>
         </scene>
     </scenes>
 </document>

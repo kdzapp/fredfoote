@@ -15,8 +15,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var automaticStartup = true
     var session: WCSession!
-    @IBOutlet var sendButton: WKInterfaceButton!
     
+    @IBOutlet var loaderTxt: WKInterfaceLabel!
+    @IBOutlet var sendButton: WKInterfaceButton!
+    @IBOutlet var crownLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -25,6 +27,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBAction func test() {
         print("called")
         presentTextInputControllerWithSuggestions(nil, allowedInputMode: .Plain) { (text) in
+            self.loaderTxt.setHidden(true)
             if(text != nil) {
                 if let message: String? = text![0] as? String {
                     let messageToSend = ["Value":message!]
@@ -50,7 +53,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     override func handleUserActivity(userInfo: [NSObject : AnyObject]?) {
-        print(userInfo)
         autoDic()
     }
     
@@ -59,6 +61,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didAppear()
         if automaticStartup {
             autoDic()
+        } else {
+            loaderTxt.setHidden(true)
         }
     }
 
@@ -77,8 +81,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             //handle and present the message on screen
             let value = replyMessage["Value"] as? String
             print(value)
-            //Exit App
-            NSThread.exit()
             }, errorHandler: {error in
                 // catch any errors here
                 print(error)
@@ -90,6 +92,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
      */
     func autoDic() {
         //Add Delay to avoid crash
+        loaderTxt.setHidden(false)
         let seconds = 1.0
         let delay = seconds * Double(NSEC_PER_SEC)
         let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
